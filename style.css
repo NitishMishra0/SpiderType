@@ -47,6 +47,7 @@ h1{
     cursor: pointer;
 }
 
+
 #info{
     color: var(--primaryColor);
 }
@@ -61,4 +62,25 @@ div#game{
     line-height: 35px;
     height:105px;
     overflow: hidden;
+    position: relative;
+}
+
+#words{
+    filter: blur(5px);
+    color: var(--textSecondary);
+}
+
+#focus-error{
+    position: absolute;
+    inset: 0;
+    text-align: center;
+    padding-top: 35px;
+}
+
+#game:focus #focus-error{
+    display: none;
+}
+
+#game:focus #words{
+    filter: blur(0);
 }
